@@ -1,4 +1,4 @@
-var lyr_dem_geoparquesombreado0 = new ol.layer.Image({
+/*var lyr_dem_geoparquesombreado0 = new ol.layer.Image({
     opacity: 1,
     title: "dem_geoparque (sombreado)",
     source: new ol.source.ImageStatic({
@@ -9,8 +9,18 @@ var lyr_dem_geoparquesombreado0 = new ol.layer.Image({
         //imageSize: [13181, 13383],
         imageExtent: [-11116312.126881, 2225204.987494, -10906301.953286, 2439444.989857]
     })
+});*/
+/***** Cambiando el raster como una capa WMS *****/
+var layer_dem_geoparque_sombreado = new ol.layer.Tile({
+    opacity: 0.6,
+    title: "dem_geoparque (sombreado)",
+    source: new ol.source.TileWMS({
+        url: 'http://132.248.14.208/geoserver/wms',
+        params: {'LAYERS': 'geonode:dem_geoparque_sombreado2_c', 'TILED': true},
+        serverType:'geoserver'
+    })
 });
-var lyr_dem_geoparqueelevacin1 = new ol.layer.Image({
+/*var lyr_dem_geoparqueelevacin1 = new ol.layer.Image({
     opacity: 1,
     title: "dem_geoparque (elevación)",
     source: new ol.source.ImageStatic({
@@ -20,6 +30,16 @@ var lyr_dem_geoparqueelevacin1 = new ol.layer.Image({
         alwaysInRange: true,
         //imageSize: [13181, 13383],
         imageExtent: [-11116312.126881, 2225204.987494, -10906301.953286, 2439444.989857]
+    })
+});*/
+/***** Cambiando el raster como una capa WMS *****/
+var layer_dem_geoparque_elevacion = new ol.layer.Tile({
+    opacity: 0.5,
+    title: "dem_geoparque (elevación)",
+    source: new ol.source.TileWMS({
+        url: 'http://132.248.14.208/geoserver/wms',
+        params: {'LAYERS': 'geonode:dem_geoparque_elevacion2_c', 'TILED': true},
+        serverType:'geoserver'
     })
 });
 
@@ -324,8 +344,35 @@ jsonSource_poligono_parque_nacional_El_Chico23.addFeatures(features_poligono_par
         <img src="styles/legend/poligono_parque_nacional_El_Chico23_0.png" /> EL CHICO<br />'
             });
 
-lyr_dem_geoparquesombreado0.setVisible(true);lyr_dem_geoparqueelevacin1.setVisible(true);lyr_municipios2.setVisible(true);lyr_geologia3.setVisible(true);lyr_pliegues_fallas_fracturas4.setVisible(true);lyr_poligono_Cubitos5.setVisible(true);lyr_poligono_El_Hiloche_46.setVisible(true);lyr_poligono_El_Hiloche_37.setVisible(true);lyr_poligono_El_Hiloche_28.setVisible(true);lyr_poligono_El_Hiloche_19.setVisible(true);lyr_geositios10.setVisible(true);lyr_cabeceras_municipales11.setVisible(true);lyr_poligono_geoparque12.setVisible(true);lyr_poligono_RBios13.setVisible(true);lyr_rios14.setVisible(true);lyr_datos_relieve15.setVisible(true);lyr_carreteras_y_caminos_principales16.setVisible(true);lyr_ruta_humboldt17.setVisible(true);lyr_ruta_historico_minera18.setVisible(true);lyr_ruta_geonatural19.setVisible(true);lyr_ruta_geocultural20.setVisible(true);lyr_minas21.setVisible(true);lyr_toponimia22.setVisible(true);lyr_poligono_parque_nacional_El_Chico23.setVisible(true);
-var layersList = [lyr_dem_geoparquesombreado0,lyr_dem_geoparqueelevacin1,lyr_municipios2,lyr_geologia3,lyr_pliegues_fallas_fracturas4,lyr_poligono_Cubitos5,lyr_poligono_El_Hiloche_46,lyr_poligono_El_Hiloche_37,lyr_poligono_El_Hiloche_28,lyr_poligono_El_Hiloche_19,lyr_geositios10,lyr_cabeceras_municipales11,lyr_poligono_geoparque12,lyr_poligono_RBios13,lyr_rios14,lyr_datos_relieve15,lyr_carreteras_y_caminos_principales16,lyr_ruta_humboldt17,lyr_ruta_historico_minera18,lyr_ruta_geonatural19,lyr_ruta_geocultural20,lyr_minas21,lyr_toponimia22,lyr_poligono_parque_nacional_El_Chico23];
+/*lyr_dem_geoparquesombreado0.setVisible(true);
+lyr_dem_geoparqueelevacin1.setVisible(true);*/
+layer_dem_geoparque_sombreado.setVisible(true);
+layer_dem_geoparque_elevacion.setVisible(true);
+lyr_municipios2.setVisible(true);
+lyr_geologia3.setVisible(true);
+lyr_pliegues_fallas_fracturas4.setVisible(true);
+lyr_poligono_Cubitos5.setVisible(true);
+lyr_poligono_El_Hiloche_46.setVisible(true);
+lyr_poligono_El_Hiloche_37.setVisible(true);
+lyr_poligono_El_Hiloche_28.setVisible(true);
+lyr_poligono_El_Hiloche_19.setVisible(true);
+lyr_geositios10.setVisible(true);
+lyr_cabeceras_municipales11.setVisible(true);
+lyr_poligono_geoparque12.setVisible(true);
+lyr_poligono_RBios13.setVisible(true);
+lyr_rios14.setVisible(true);
+lyr_datos_relieve15.setVisible(true);
+lyr_carreteras_y_caminos_principales16.setVisible(true);
+lyr_ruta_humboldt17.setVisible(true);
+lyr_ruta_historico_minera18.setVisible(true);
+lyr_ruta_geonatural19.setVisible(true);
+lyr_ruta_geocultural20.setVisible(true);
+lyr_minas21.setVisible(true);
+lyr_toponimia22.setVisible(true);
+lyr_poligono_parque_nacional_El_Chico23.setVisible(true);
+
+// var layersList = [lyr_dem_geoparquesombreado0,lyr_dem_geoparqueelevacin1,lyr_municipios2,lyr_geologia3,lyr_pliegues_fallas_fracturas4,lyr_poligono_Cubitos5,lyr_poligono_El_Hiloche_46,lyr_poligono_El_Hiloche_37,lyr_poligono_El_Hiloche_28,lyr_poligono_El_Hiloche_19,lyr_geositios10,lyr_cabeceras_municipales11,lyr_poligono_geoparque12,lyr_poligono_RBios13,lyr_rios14,lyr_datos_relieve15,lyr_carreteras_y_caminos_principales16,lyr_ruta_humboldt17,lyr_ruta_historico_minera18,lyr_ruta_geonatural19,lyr_ruta_geocultural20,lyr_minas21,lyr_toponimia22,lyr_poligono_parque_nacional_El_Chico23];
+var layersList = [layer_dem_geoparque_sombreado,layer_dem_geoparque_elevacion,lyr_municipios2,lyr_geologia3,lyr_pliegues_fallas_fracturas4,lyr_poligono_Cubitos5,lyr_poligono_El_Hiloche_46,lyr_poligono_El_Hiloche_37,lyr_poligono_El_Hiloche_28,lyr_poligono_El_Hiloche_19,lyr_geositios10,lyr_cabeceras_municipales11,lyr_poligono_geoparque12,lyr_poligono_RBios13,lyr_rios14,lyr_datos_relieve15,lyr_carreteras_y_caminos_principales16,lyr_ruta_humboldt17,lyr_ruta_historico_minera18,lyr_ruta_geonatural19,lyr_ruta_geocultural20,lyr_minas21,lyr_toponimia22,lyr_poligono_parque_nacional_El_Chico23];
 lyr_municipios2.set('fieldAliases', {'NAME': 'NAME', 'GM_LAYER': 'GM_LAYER', 'GM_TYPE': 'GM_TYPE', 'LAYER': 'LAYER', 'MAP_NAME': 'MAP_NAME', 'OBJECTID': 'OBJECTID', 'CVE_ENT': 'CVE_ENT', 'NOM_ENT': 'NOM_ENT', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', 'CVE_MUN': 'CVE_MUN', 'NOM_MUN': 'NOM_MUN', 'Numero': 'Numero', });
 lyr_geologia3.set('fieldAliases', {'SIMBOLO': 'SIMBOLO', 'NOMBRE': 'NOMBRE', 'EDAD': 'EDAD', 'clasif': 'clasif', });
 lyr_pliegues_fallas_fracturas4.set('fieldAliases', {'LAYER': 'LAYER', 'SIMBOLO': 'SIMBOLO', 'TIPO': 'TIPO', 'DIMENSI_KM': 'DIMENSI_KM', 'RUMBO': 'RUMBO', 'AZIMUTH': 'AZIMUTH', });
