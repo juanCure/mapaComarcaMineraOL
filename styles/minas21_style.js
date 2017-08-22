@@ -35,7 +35,7 @@ var style_minas21 = function(feature, resolution){
     key = value + "_" + labelText
     if (!styleCache_minas21[key]){
         var text = new ol.style.Text({
-                font: '5.2px \'MS Shell Dlg 2\', sans-serif',
+                font: '16px \'MS Shell Dlg 2\', sans-serif',
                 text: labelText,
                 textBaseline: "middle",
                 textAlign: textAlign,
