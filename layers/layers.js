@@ -12,13 +12,13 @@
 });*/
 /***** Cambiando el raster como una capa WMS *****/
 var layer_dem_geoparque_sombreado = new ol.layer.Tile({
-    opacity: 0.6,
-    title: "dem_geoparque (sombreado)",
-    source: new ol.source.TileWMS({
-        url: 'http://132.248.14.208/geoserver/wms',
-        params: { 'LAYERS': 'geonode:dem_geoparque_sombreado2_c', 'TILED': true },
-        serverType: 'geoserver'
-    })
+  opacity: 0.6,
+  title: "dem_geoparque (sombreado)",
+  source: new ol.source.TileWMS({
+    url: 'http://132.248.14.208/geoserver/wms',
+    params: { 'LAYERS': 'geonode:dem_geoparque_sombreado2_c', 'TILED': true },
+    serverType: 'geoserver'
+  })
 });
 /*var lyr_dem_geoparqueelevacin1 = new ol.layer.Image({
     opacity: 1,
@@ -34,49 +34,49 @@ var layer_dem_geoparque_sombreado = new ol.layer.Tile({
 });*/
 /***** Cambiando el raster como una capa WMS *****/
 var layer_dem_geoparque_elevacion = new ol.layer.Tile({
-    opacity: 0.5,
-    title: "dem_geoparque (elevación)",
-    source: new ol.source.TileWMS({
-        url: 'http://132.248.14.208/geoserver/wms',
-        params: { 'LAYERS': 'geonode:dem_geoparque_elevacion2_c', 'TILED': true },
-        serverType: 'geoserver'
-    })
+  opacity: 0.5,
+  title: "dem_geoparque (elevación)",
+  source: new ol.source.TileWMS({
+    url: 'http://132.248.14.208/geoserver/wms',
+    params: { 'LAYERS': 'geonode:dem_geoparque_elevacion2_c', 'TILED': true },
+    serverType: 'geoserver'
+  })
 });
 
 var format_municipios2 = new ol.format.GeoJSON();
 var features_municipios2 = format_municipios2.readFeatures(json_municipios2, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_municipios2 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_municipios2.addFeatures(features_municipios2);
 
 var lyr_municipios2 = new ol.layer.Vector({
-    source: jsonSource_municipios2,
-    style: style_municipios2,
-    title: '<img src="styles/legend/municipios2.png" /> municipios'
+  source: jsonSource_municipios2,
+  style: style_municipios2,
+  title: '<img src="styles/legend/municipios2.png" /> municipios'
 });
 var format_geologia3 = new ol.format.GeoJSON();
 var features_geologia3 = format_geologia3.readFeatures(json_geologia3, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_geologia3 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_geologia3.addFeatures(features_geologia3);
 var lyr_geologia3 = new ol.layer.Vector({
-    source: jsonSource_geologia3,
-    style: style_geologia3,
-    title: 'geologia'
+  source: jsonSource_geologia3,
+  style: style_geologia3,
+  title: 'geologia'
 });
 
 var format_pliegues_fallas_fracturas4 = new ol.format.GeoJSON();
 var features_pliegues_fallas_fracturas4 = format_pliegues_fallas_fracturas4.readFeatures(json_pliegues_fallas_fracturas4, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_pliegues_fallas_fracturas4 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_pliegues_fallas_fracturas4.addFeatures(features_pliegues_fallas_fracturas4);
 var lyr_pliegues_fallas_fracturas4 = new ol.layer.Vector({
-    source: jsonSource_pliegues_fallas_fracturas4,
-    style: style_pliegues_fallas_fracturas4,
-    title: 'pliegues_fallas_fracturas<br />\
+  source: jsonSource_pliegues_fallas_fracturas4,
+  style: style_pliegues_fallas_fracturas4,
+  title: 'pliegues_fallas_fracturas<br />\
         <img src="styles/legend/pliegues_fallas_fracturas4_0.png" /> PLIEGUE ACOSTADO<br />\
         <img src="styles/legend/pliegues_fallas_fracturas4_1.png" /> FALLA NORMAL<br />\
         <img src="styles/legend/pliegues_fallas_fracturas4_2.png" /> FRACTURA<br />'
@@ -84,58 +84,58 @@ var lyr_pliegues_fallas_fracturas4 = new ol.layer.Vector({
 var format_poligono_Cubitos5 = new ol.format.GeoJSON();
 var features_poligono_Cubitos5 = format_poligono_Cubitos5.readFeatures(json_poligono_Cubitos5, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_Cubitos5 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_Cubitos5.addFeatures(features_poligono_Cubitos5);
 
 var lyr_poligono_Cubitos5 = new ol.layer.Vector({
-    source: jsonSource_poligono_Cubitos5,
-    style: style_poligono_Cubitos5,
-    title: '<img src="styles/legend/poligono_Cubitos5.png" /> poligono_Cubitos'
+  source: jsonSource_poligono_Cubitos5,
+  style: style_poligono_Cubitos5,
+  title: '<img src="styles/legend/poligono_Cubitos5.png" /> poligono_Cubitos'
 });
 var format_poligono_El_Hiloche_46 = new ol.format.GeoJSON();
 var features_poligono_El_Hiloche_46 = format_poligono_El_Hiloche_46.readFeatures(json_poligono_El_Hiloche_46, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_El_Hiloche_46 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_El_Hiloche_46.addFeatures(features_poligono_El_Hiloche_46);
 var lyr_poligono_El_Hiloche_46 = new ol.layer.Vector({
-    source: jsonSource_poligono_El_Hiloche_46,
-    style: style_poligono_El_Hiloche_46,
-    title: '<img src="styles/legend/poligono_El_Hiloche_46.png" /> poligono_El_Hiloche_4'
+  source: jsonSource_poligono_El_Hiloche_46,
+  style: style_poligono_El_Hiloche_46,
+  title: '<img src="styles/legend/poligono_El_Hiloche_46.png" /> poligono_El_Hiloche_4'
 });
 var format_poligono_El_Hiloche_37 = new ol.format.GeoJSON();
 var features_poligono_El_Hiloche_37 = format_poligono_El_Hiloche_37.readFeatures(json_poligono_El_Hiloche_37, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_El_Hiloche_37 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_El_Hiloche_37.addFeatures(features_poligono_El_Hiloche_37);
 var lyr_poligono_El_Hiloche_37 = new ol.layer.Vector({
-    source: jsonSource_poligono_El_Hiloche_37,
-    style: style_poligono_El_Hiloche_37,
-    title: '<img src="styles/legend/poligono_El_Hiloche_37.png" /> poligono_El_Hiloche_3'
+  source: jsonSource_poligono_El_Hiloche_37,
+  style: style_poligono_El_Hiloche_37,
+  title: '<img src="styles/legend/poligono_El_Hiloche_37.png" /> poligono_El_Hiloche_3'
 });
 var format_poligono_El_Hiloche_28 = new ol.format.GeoJSON();
 var features_poligono_El_Hiloche_28 = format_poligono_El_Hiloche_28.readFeatures(json_poligono_El_Hiloche_28, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_El_Hiloche_28 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_El_Hiloche_28.addFeatures(features_poligono_El_Hiloche_28);
 var lyr_poligono_El_Hiloche_28 = new ol.layer.Vector({
-    source: jsonSource_poligono_El_Hiloche_28,
-    style: style_poligono_El_Hiloche_28,
-    title: '<img src="styles/legend/poligono_El_Hiloche_28.png" /> poligono_El_Hiloche_2'
+  source: jsonSource_poligono_El_Hiloche_28,
+  style: style_poligono_El_Hiloche_28,
+  title: '<img src="styles/legend/poligono_El_Hiloche_28.png" /> poligono_El_Hiloche_2'
 });
 var format_poligono_El_Hiloche_19 = new ol.format.GeoJSON();
 var features_poligono_El_Hiloche_19 = format_poligono_El_Hiloche_19.readFeatures(json_poligono_El_Hiloche_19, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_El_Hiloche_19 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_El_Hiloche_19.addFeatures(features_poligono_El_Hiloche_19);
 var lyr_poligono_El_Hiloche_19 = new ol.layer.Vector({
-    source: jsonSource_poligono_El_Hiloche_19,
-    style: style_poligono_El_Hiloche_19,
-    title: '<img src="styles/legend/poligono_El_Hiloche_19.png" /> poligono_El_Hiloche_1'
+  source: jsonSource_poligono_El_Hiloche_19,
+  style: style_poligono_El_Hiloche_19,
+  title: '<img src="styles/legend/poligono_El_Hiloche_19.png" /> poligono_El_Hiloche_1'
 });
 /*var format_geositios10 = new ol.format.GeoJSON();
 var features_geositios10 = format_geositios10.readFeatures(json_geositios10, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
@@ -174,13 +174,13 @@ var lyr_geositios0 = new ol.layer.Vector({
 var format_cabeceras_municipales11 = new ol.format.GeoJSON();
 var features_cabeceras_municipales11 = format_cabeceras_municipales11.readFeatures(json_cabeceras_municipales11, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_cabeceras_municipales11 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_cabeceras_municipales11.addFeatures(features_cabeceras_municipales11);
 var lyr_cabeceras_municipales11 = new ol.layer.Vector({
-    source: jsonSource_cabeceras_municipales11,
-    style: style_cabeceras_municipales11,
-    title: 'cabeceras_municipales<br />\
+  source: jsonSource_cabeceras_municipales11,
+  style: style_cabeceras_municipales11,
+  title: 'cabeceras_municipales<br />\
         <img src="styles/legend/cabeceras_municipales11_0.png" /> Atotonilco El Grande<br />\
         <img src="styles/legend/cabeceras_municipales11_1.png" /> Epazoyucan<br />\
         <img src="styles/legend/cabeceras_municipales11_2.png" /> Huasca de Ocampo<br />\
@@ -194,48 +194,48 @@ var lyr_cabeceras_municipales11 = new ol.layer.Vector({
 var format_poligono_geoparque12 = new ol.format.GeoJSON();
 var features_poligono_geoparque12 = format_poligono_geoparque12.readFeatures(json_poligono_geoparque12, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_geoparque12 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_geoparque12.addFeatures(features_poligono_geoparque12);
 var lyr_poligono_geoparque12 = new ol.layer.Vector({
-    source: jsonSource_poligono_geoparque12,
-    style: style_poligono_geoparque12,
-    title: '<img src="styles/legend/poligono_geoparque12.png" /> poligono_geoparque'
+  source: jsonSource_poligono_geoparque12,
+  style: style_poligono_geoparque12,
+  title: '<img src="styles/legend/poligono_geoparque12.png" /> poligono_geoparque'
 });
 var format_poligono_RBios13 = new ol.format.GeoJSON();
 var features_poligono_RBios13 = format_poligono_RBios13.readFeatures(json_poligono_RBios13, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_RBios13 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_RBios13.addFeatures(features_poligono_RBios13);
 var lyr_poligono_RBios13 = new ol.layer.Vector({
-    source: jsonSource_poligono_RBios13,
-    style: style_poligono_RBios13,
-    title: '<img src="styles/legend/poligono_RBios13.png" /> poligono_RBios'
+  source: jsonSource_poligono_RBios13,
+  style: style_poligono_RBios13,
+  title: '<img src="styles/legend/poligono_RBios13.png" /> poligono_RBios'
 });
 var format_rios14 = new ol.format.GeoJSON();
 var features_rios14 = format_rios14.readFeatures(json_rios14, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_rios14 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_rios14.addFeatures(features_rios14);
 var lyr_rios14 = new ol.layer.Vector({
-    source: jsonSource_rios14,
-    style: style_rios14,
-    title: 'rios<br />\
+  source: jsonSource_rios14,
+  style: style_rios14,
+  title: 'rios<br />\
         <img src="styles/legend/rios14_0.png" /> Intermitente<br />\
         <img src="styles/legend/rios14_1.png" /> Perenne<br />'
 });
 var format_datos_relieve15 = new ol.format.GeoJSON();
 var features_datos_relieve15 = format_datos_relieve15.readFeatures(json_datos_relieve15, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_datos_relieve15 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_datos_relieve15.addFeatures(features_datos_relieve15);
 var lyr_datos_relieve15 = new ol.layer.Vector({
-    source: jsonSource_datos_relieve15,
-    style: style_datos_relieve15,
-    title: 'datos_relieve<br />\
+  source: jsonSource_datos_relieve15,
+  style: style_datos_relieve15,
+  title: 'datos_relieve<br />\
         <img src="styles/legend/datos_relieve15_0.png" /> ELEVACIÓN<br />\
         <img src="styles/legend/datos_relieve15_1.png" /> AGUAS TERMALES<br />\
         <img src="styles/legend/datos_relieve15_2.png" /> CASCADA<br />'
@@ -243,13 +243,13 @@ var lyr_datos_relieve15 = new ol.layer.Vector({
 var format_carreteras_y_caminos_principales16 = new ol.format.GeoJSON();
 var features_carreteras_y_caminos_principales16 = format_carreteras_y_caminos_principales16.readFeatures(json_carreteras_y_caminos_principales16, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_carreteras_y_caminos_principales16 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_carreteras_y_caminos_principales16.addFeatures(features_carreteras_y_caminos_principales16);
 var lyr_carreteras_y_caminos_principales16 = new ol.layer.Vector({
-    source: jsonSource_carreteras_y_caminos_principales16,
-    style: style_carreteras_y_caminos_principales16,
-    title: 'carreteras_y_caminos_principales<br />\
+  source: jsonSource_carreteras_y_caminos_principales16,
+  style: style_carreteras_y_caminos_principales16,
+  title: 'carreteras_y_caminos_principales<br />\
         <img src="styles/legend/carreteras_y_caminos_principales16_0.png" /> 30<br />\
         <img src="styles/legend/carreteras_y_caminos_principales16_1.png" /> 41<br />\
         <img src="styles/legend/carreteras_y_caminos_principales16_2.png" /> 34<br />\
@@ -268,80 +268,80 @@ var lyr_carreteras_y_caminos_principales16 = new ol.layer.Vector({
 var format_ruta_humboldt17 = new ol.format.GeoJSON();
 var features_ruta_humboldt17 = format_ruta_humboldt17.readFeatures(json_ruta_humboldt17, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_ruta_humboldt17 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_ruta_humboldt17.addFeatures(features_ruta_humboldt17);
 var lyr_ruta_humboldt17 = new ol.layer.Vector({
-    source: jsonSource_ruta_humboldt17,
-    style: style_ruta_humboldt17,
-    title: '<img src="styles/legend/ruta_humboldt17.png" /> ruta_humboldt'
+  source: jsonSource_ruta_humboldt17,
+  style: style_ruta_humboldt17,
+  title: '<img src="styles/legend/ruta_humboldt17.png" /> ruta_humboldt'
 });
 var format_ruta_historico_minera18 = new ol.format.GeoJSON();
 var features_ruta_historico_minera18 = format_ruta_historico_minera18.readFeatures(json_ruta_historico_minera18, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_ruta_historico_minera18 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_ruta_historico_minera18.addFeatures(features_ruta_historico_minera18);
 var lyr_ruta_historico_minera18 = new ol.layer.Vector({
-    source: jsonSource_ruta_historico_minera18,
-    style: style_ruta_historico_minera18,
-    title: '<img src="styles/legend/ruta_historico_minera18.png" /> ruta_historico_minera'
+  source: jsonSource_ruta_historico_minera18,
+  style: style_ruta_historico_minera18,
+  title: '<img src="styles/legend/ruta_historico_minera18.png" /> ruta_historico_minera'
 });
 var format_ruta_geonatural19 = new ol.format.GeoJSON();
 var features_ruta_geonatural19 = format_ruta_geonatural19.readFeatures(json_ruta_geonatural19, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_ruta_geonatural19 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_ruta_geonatural19.addFeatures(features_ruta_geonatural19);
 var lyr_ruta_geonatural19 = new ol.layer.Vector({
-    source: jsonSource_ruta_geonatural19,
-    style: style_ruta_geonatural19,
-    title: '<img src="styles/legend/ruta_geonatural19.png" /> ruta_geonatural'
+  source: jsonSource_ruta_geonatural19,
+  style: style_ruta_geonatural19,
+  title: '<img src="styles/legend/ruta_geonatural19.png" /> ruta_geonatural'
 });
 var format_ruta_geocultural20 = new ol.format.GeoJSON();
 var features_ruta_geocultural20 = format_ruta_geocultural20.readFeatures(json_ruta_geocultural20, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_ruta_geocultural20 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_ruta_geocultural20.addFeatures(features_ruta_geocultural20);
 var lyr_ruta_geocultural20 = new ol.layer.Vector({
-    source: jsonSource_ruta_geocultural20,
-    style: style_ruta_geocultural20,
-    title: '<img src="styles/legend/ruta_geocultural20.png" /> ruta_geocultural'
+  source: jsonSource_ruta_geocultural20,
+  style: style_ruta_geocultural20,
+  title: '<img src="styles/legend/ruta_geocultural20.png" /> ruta_geocultural'
 });
 var format_minas21 = new ol.format.GeoJSON();
 var features_minas21 = format_minas21.readFeatures(json_minas21, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_minas21 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_minas21.addFeatures(features_minas21);
 var lyr_minas21 = new ol.layer.Vector({
-    source: jsonSource_minas21,
-    style: style_minas21,
-    title: 'minas<br />\
+  source: jsonSource_minas21,
+  style: style_minas21,
+  title: 'minas<br />\
         <img src="styles/legend/minas21_0.png" /> MINA<br />'
 });
 var format_toponimia22 = new ol.format.GeoJSON();
 var features_toponimia22 = format_toponimia22.readFeatures(json_toponimia22, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_toponimia22 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_toponimia22.addFeatures(features_toponimia22);
 var lyr_toponimia22 = new ol.layer.Vector({
-    source: jsonSource_toponimia22,
-    style: style_toponimia22,
-    title: '<img src="styles/legend/toponimia22.png" /> toponimia'
+  source: jsonSource_toponimia22,
+  style: style_toponimia22,
+  title: '<img src="styles/legend/toponimia22.png" /> toponimia'
 });
 var format_poligono_parque_nacional_El_Chico23 = new ol.format.GeoJSON();
 var features_poligono_parque_nacional_El_Chico23 = format_poligono_parque_nacional_El_Chico23.readFeatures(json_poligono_parque_nacional_El_Chico23, { dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857' });
 var jsonSource_poligono_parque_nacional_El_Chico23 = new ol.source.Vector({
-    attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
+  attributions: [new ol.Attribution({ html: '<a href=""></a>' })],
 });
 jsonSource_poligono_parque_nacional_El_Chico23.addFeatures(features_poligono_parque_nacional_El_Chico23);
 var lyr_poligono_parque_nacional_El_Chico23 = new ol.layer.Vector({
-    source: jsonSource_poligono_parque_nacional_El_Chico23,
-    style: style_poligono_parque_nacional_El_Chico23,
-    title: 'poligono_parque_nacional_El_Chico<br />\
+  source: jsonSource_poligono_parque_nacional_El_Chico23,
+  style: style_poligono_parque_nacional_El_Chico23,
+  title: 'poligono_parque_nacional_El_Chico<br />\
         <img src="styles/legend/poligono_parque_nacional_El_Chico23_0.png" /> EL CHICO<br />'
 });
 
@@ -374,7 +374,7 @@ lyr_toponimia22.setVisible(true);
 lyr_poligono_parque_nacional_El_Chico23.setVisible(true);
 
 // var layersList = [lyr_dem_geoparquesombreado0,lyr_dem_geoparqueelevacin1,lyr_municipios2,lyr_geologia3,lyr_pliegues_fallas_fracturas4,lyr_poligono_Cubitos5,lyr_poligono_El_Hiloche_46,lyr_poligono_El_Hiloche_37,lyr_poligono_El_Hiloche_28,lyr_poligono_El_Hiloche_19,lyr_geositios10,lyr_cabeceras_municipales11,lyr_poligono_geoparque12,lyr_poligono_RBios13,lyr_rios14,lyr_datos_relieve15,lyr_carreteras_y_caminos_principales16,lyr_ruta_humboldt17,lyr_ruta_historico_minera18,lyr_ruta_geonatural19,lyr_ruta_geocultural20,lyr_minas21,lyr_toponimia22,lyr_poligono_parque_nacional_El_Chico23];
-var layersList = [layer_dem_geoparque_sombreado, layer_dem_geoparque_elevacion, lyr_municipios2, lyr_geologia3, lyr_pliegues_fallas_fracturas4, lyr_poligono_Cubitos5, lyr_poligono_El_Hiloche_46, lyr_poligono_El_Hiloche_37, lyr_poligono_El_Hiloche_28, lyr_poligono_El_Hiloche_19, lyr_geositios0, lyr_cabeceras_municipales11, lyr_poligono_geoparque12, lyr_poligono_RBios13, lyr_rios14, lyr_datos_relieve15, lyr_carreteras_y_caminos_principales16, lyr_ruta_humboldt17, lyr_ruta_historico_minera18, lyr_ruta_geonatural19, lyr_ruta_geocultural20, lyr_minas21, lyr_toponimia22, lyr_poligono_parque_nacional_El_Chico23];
+var layersList = [layer_dem_geoparque_sombreado, layer_dem_geoparque_elevacion, lyr_municipios2, lyr_geologia3, lyr_pliegues_fallas_fracturas4, lyr_poligono_Cubitos5, lyr_poligono_El_Hiloche_46, lyr_poligono_El_Hiloche_37, lyr_poligono_El_Hiloche_28, lyr_poligono_El_Hiloche_19, lyr_cabeceras_municipales11, lyr_poligono_geoparque12, lyr_poligono_RBios13, lyr_rios14, lyr_datos_relieve15, lyr_carreteras_y_caminos_principales16, lyr_ruta_humboldt17, lyr_ruta_historico_minera18, lyr_ruta_geonatural19, lyr_ruta_geocultural20, lyr_minas21, lyr_toponimia22, lyr_poligono_parque_nacional_El_Chico23,lyr_geositios0];
 lyr_municipios2.set('fieldAliases', { 'NAME': 'NAME', 'GM_LAYER': 'GM_LAYER', 'GM_TYPE': 'GM_TYPE', 'LAYER': 'LAYER', 'MAP_NAME': 'MAP_NAME', 'OBJECTID': 'OBJECTID', 'CVE_ENT': 'CVE_ENT', 'NOM_ENT': 'NOM_ENT', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', 'CVE_MUN': 'CVE_MUN', 'NOM_MUN': 'NOM_MUN', 'Numero': 'Numero', });
 lyr_geologia3.set('fieldAliases', { 'SIMBOLO': 'SIMBOLO', 'NOMBRE': 'NOMBRE', 'EDAD': 'EDAD', 'clasif': 'clasif', });
 lyr_pliegues_fallas_fracturas4.set('fieldAliases', { 'LAYER': 'LAYER', 'SIMBOLO': 'SIMBOLO', 'TIPO': 'TIPO', 'DIMENSI_KM': 'DIMENSI_KM', 'RUMBO': 'RUMBO', 'AZIMUTH': 'AZIMUTH', });
@@ -445,5 +445,5 @@ lyr_minas21.set('fieldLabels', { 'OBJECTID': 'no label', 'ENTIDAD': 'no label', 
 lyr_toponimia22.set('fieldLabels', { 'nombre': 'no label', 'tipo': 'no label', });
 lyr_poligono_parque_nacional_El_Chico23.set('fieldLabels', { 'ID_UANP': 'no label', 'NOMBRE': 'no label', 'CAT_DECRET': 'no label', 'CAT_MANEJO': 'no label', 'ULT_DECRET': 'no label', 'ESTADOS': 'no label', 'MUNICIPIOS': 'no label', 'SUP_DECRET': 'no label', 'SUP_TOT_CA': 'no label', 'SUP_TER_CA': 'no label', 'SUP_MAR_CA': 'no label', 'REGION': 'no label', 'ID_ANP': 'no label', 'Shape_Leng': 'no label', 'Shape_Area': 'no label', 'Area': 'no label', });
 lyr_poligono_parque_nacional_El_Chico23.on('precompose', function(evt) {
-    evt.context.globalCompositeOperation = 'normal';
+  evt.context.globalCompositeOperation = 'normal';
 });
