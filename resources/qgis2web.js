@@ -234,9 +234,9 @@ var onSingleClick = function(evt) {
   var currentFeature;
   var currentFeatureKeys;
   var count = 1;
-  var clusteredFeatures;
+  var clusteredFeatures;  
   /***** New content for popup *****/
-  var myPopupText = "<br><p>Aquí debe ir una imagen o video si el marcador es un geositio </p>";
+  var content_image = '', video = '';
   map.forEachFeatureAtPixel(pixel, function(feature, layer) {
     var doPopup = false;
     if (count == 1) {
@@ -279,11 +279,15 @@ var onSingleClick = function(evt) {
           popupText = popupText + '</ul>';
         }
       } else {
+        /*** Agregando los contenidos para el popup de geositios ***/
+        content_image = (currentFeature.get('image') != null ? '<img src="images/' + currentFeature.get('image') + '" width="560;"/>' : '');
+        content_video = (currentFeature.get('video') != null ? '<iframe width="560" height="315" src="' + currentFeature.get('video') + '" frameborder="0" allowfullscreen></iframe>': '');
         currentFeatureKeys = currentFeature.getKeys();
         if (doPopup) {
           popupText = '<table>';
           for (var i = 0; i < currentFeatureKeys.length; i++) {
-            if (currentFeatureKeys[i] != 'geometry') {
+            if (currentFeatureKeys[i] != 'geometry' && currentFeatureKeys[i] != 'image' 
+              && currentFeatureKeys[i] != 'video') {
               popupField = '';
               if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label") {
                 popupField += '<th>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + ':</th><td>';
@@ -310,7 +314,7 @@ var onSingleClick = function(evt) {
 
   if (popupText) {
     overlayPopup.setPosition(coord);
-    content.innerHTML = popupText + myPopupText;
+    content.innerHTML = content_image + "<br>" + content_video + "<br>" + popupText;
     container.style.display = 'block';
   } else {
     container.style.display = 'none';
