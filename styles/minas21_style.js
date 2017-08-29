@@ -48,7 +48,9 @@ var style_minas21 = function(feature, resolution) {
     if(zoom >= 13){
       style = categories_minas21(feature, value, size*2);
       var text = new ol.style.Text({
-        font: font_size + 'px \'MS Shell Dlg 2\', sans-serif',
+        // font: font_size + 'px \'MS Shell Dlg 2\', sans-serif',
+        // font: font_size + 'px arial, sans-serif',
+        font: font_size + 'px italic bold Calibri, serif',
         text: labelText,
         textBaseline: "middle",
         textAlign: textAlign,
