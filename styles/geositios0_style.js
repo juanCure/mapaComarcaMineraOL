@@ -1,7 +1,7 @@
 var size = 0;
 
 function categories_geositios0(feature, value, size) {
-  switch (value) {
+  /*switch (value) {
     case 'biota, ecosistemas':
       return [new ol.style.Style({
         image: new ol.style.RegularShape({
@@ -62,7 +62,39 @@ function categories_geositios0(feature, value, size) {
         })
       })];
       break;
-  }
+  }*/
+  switch (value.toString()) {
+    case 'Biota y ecosistemas':
+        return [new ol.style.Style({
+            image: new ol.style.RegularShape({
+                radius: 12.0 + size,
+                points: 6,
+                stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0 }),
+                fill: new ol.style.Fill({ color: 'rgba(48,217,29,1.0)' })
+            })
+        })];
+        break;
+    case 'Geología':
+        return [new ol.style.Style({
+            image: new ol.style.RegularShape({
+                radius: 12.0 + size,
+                points: 6,
+                stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0 }),
+                fill: new ol.style.Fill({ color: 'rgba(255,230,0,1.0)' })
+            })
+        })];
+        break;
+    case 'Histórica-Cultural':
+        return [new ol.style.Style({
+            image: new ol.style.RegularShape({
+                radius: 12.0 + size,
+                points: 6,
+                stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0 }),
+                fill: new ol.style.Fill({ color: 'rgba(65,132,255,1.0)' })
+            })
+        })];
+        break;
+    }
 };
 var styleCache_geositios0 = {}
 var style_geositios0 = function(feature, resolution) {
@@ -70,7 +102,8 @@ var style_geositios0 = function(feature, resolution) {
     feature: feature,
     variables: {}
   };
-  var value = feature.get("categoria");
+  // var value = feature.get("categoria");
+  var value = feature.get("relevC");
   var labelText = "";
   var key = "";
   size = 0;
