@@ -6,9 +6,14 @@ closer.onclick = function() {
   closer.blur();
   return false;
 };
-var overlayPopup = new ol.Overlay({
-  element: container
-});
+// var overlayPopup = new ol.Overlay({
+var overlayPopup = new ol.Overlay(/** @type {olx.OverlayOptions} */ ({
+  element: container,
+  autoPan: true,
+  autoPanAnimation: {
+    duration: 250
+  }
+}));
 
 var expandedAttribution = new ol.control.Attribution({
   collapsible: false
