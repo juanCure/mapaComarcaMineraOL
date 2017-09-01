@@ -11,7 +11,7 @@ function categories_minas21(feature, value, size) {
                     anchorXUnits: "pixels",
                     anchorYUnits: "pixels",
                     rotation: 0.0,
-                    src: "styles/poi_mine.svg"
+                    src: "styles/poi_mine_b.svg"
                 })
             })];
             break;
@@ -22,7 +22,7 @@ var style_minas21 = function(feature, resolution) {
     /***** Verificando el nivel del zoom para establecer un tamaño adecuado
             para la fuente del texto de la capa minas *****/
     var zoom = map.getView().getZoom();
-    console.log("Zoom: " + zoom);
+    // console.log("Zoom: " + zoom);
     var font_size = zoom * (5/4);
     size = 0.0258620689655;
     var context = {
