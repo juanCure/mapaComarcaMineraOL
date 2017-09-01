@@ -77,7 +77,6 @@ function categories_carreteras_y_caminos_principales16(feature, value, size) {
 var styleCache_carreteras_y_caminos_principales16 = {}
 var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
     var zoom = map.getView().getZoom();
-    console.log("Zoom: " + zoom);
     var font_size = zoom * (5/4);
 
     var context = {
@@ -85,7 +84,7 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
         variables: {}
     };
     var value = feature.get("ID_SEGMENT");
-    console.log(typeof value);
+    // console.log(typeof value);
     var labelText = "";
     var key = "";
     size = 0;
@@ -99,7 +98,7 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
     }
     var style = categories_carreteras_y_caminos_principales16(feature, value, size);
     key = value + "_" + labelText
-    /*if (!styleCache_carreteras_y_caminos_principales16[key]) {
+    if (!styleCache_carreteras_y_caminos_principales16[key]) {
         var text = new ol.style.Text({
             font: '13px \'Calibri\', sans-serif',
             text: labelText,
@@ -112,9 +111,9 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
             })
         });
         styleCache_carreteras_y_caminos_principales16[key] = new ol.style.Style({ "text": text })
-    }*/
+    }
 
-    if(zoom >= 13){
+    /*if(zoom >= 13){
       var text = new ol.style.Text({
         font: font_size + 'px \'MS Shell Dlg 2\', sans-serif',
         text: labelText,
@@ -130,7 +129,7 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
       styleCache_carreteras_y_caminos_principales16[key] = new ol.style.Style({ "text": text });    
     } else {
       styleCache_carreteras_y_caminos_principales16[key] = new ol.style.Style({ "text": '' });
-    }
+    }*/
 
     var allStyles = [styleCache_carreteras_y_caminos_principales16[key]];
     allStyles.push.apply(allStyles, style);
