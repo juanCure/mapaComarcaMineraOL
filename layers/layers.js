@@ -350,7 +350,7 @@ lyr_dem_geoparqueelevacin1.setVisible(true);*/
 layer_dem_geoparque_sombreado.setVisible(true);
 layer_dem_geoparque_elevacion.setVisible(true);
 lyr_municipios2.setVisible(true);
-lyr_geologia3.setVisible(true);
+lyr_geologia3.setVisible(false);
 lyr_pliegues_fallas_fracturas4.setVisible(true);
 lyr_poligono_Cubitos5.setVisible(true);
 lyr_poligono_El_Hiloche_46.setVisible(true);
