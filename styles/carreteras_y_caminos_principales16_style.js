@@ -102,26 +102,34 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
   key = value + "_" + labelText
   if (!styleCache_carreteras_y_caminos_principales16[key]) {
     var text = new ol.style.Text({
-      font: '13px \'Calibri\', sans-serif',
-      text: labelText,
-      textBaseline: "left",
-      textAlign: textAlign,
-      offsetX: offsetX,
-      offsetY: offsetY,
-      fill: new ol.style.Fill({
-        color: 'rgba(0, 0, 0, 1)'
+        font: '13px \'Calibri\', sans-serif',
+        text: labelText,
+        textBaseline: "left",
+        textAlign: textAlign,
+        offsetX: offsetX,
+        offsetY: offsetY,
+        fill: new ol.style.Fill({
+          color: 'rgba(0, 0, 0, 1)'
+        })
+      });
+
+    if(feature.getGeometry().getType() == "GeometryCollection"){
+      var geometries = feature.getGeometry().getGeometries();
+      var point = geometries[0];
+      var line = geometries[1];
+      var image = new ol.style.Icon({
+        imgSize: [580, 580],
+        scale: 0.0258620689655,
+        anchor: [7, 7],
+        anchorXUnits: "pixels",
+        anchorYUnits: "pixels",
+        rotation: 0.0,
+        src: "styles/background_security_b.svg"
       })
-    });
-    var image = new ol.style.Icon({
-      imgSize: [580, 580],
-      scale: 0.0258620689655,
-      anchor: [7, 7],
-      anchorXUnits: "pixels",
-      anchorYUnits: "pixels",
-      rotation: 0.0,
-      src: "styles/background_security.svg"
-    })
-    styleCache_carreteras_y_caminos_principales16[key] = new ol.style.Style({ "text": text })
+      styleCache_carreteras_y_caminos_principales16[key] = new ol.style.Style({ "geometry": point, "text": text, "image": image });
+    } else {
+      styleCache_carreteras_y_caminos_principales16[key] = new ol.style.Style({"text": text});
+    }
   }
 
   var allStyles = [styleCache_carreteras_y_caminos_principales16[key]];
