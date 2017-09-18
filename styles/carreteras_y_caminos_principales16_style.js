@@ -92,8 +92,8 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
   var key = "";
   size = 0;
   var textAlign = "left";
-  var offsetX = 8;
-  var offsetY = 3;
+  var offsetX = 0;
+  var offsetY = 10;
   if (feature.get("CODIGO") != null) {
     labelText = String(feature.get("CODIGO"));
   }
@@ -102,9 +102,9 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
   key = value + "_" + labelText
   if (!styleCache_carreteras_y_caminos_principales16[key]) {
     var text = new ol.style.Text({
-        font: '13px \'Calibri\', sans-serif',
+        font: '10px \'Calibri\', sans-serif',
         text: labelText,
-        textBaseline: "left",
+        textBaseline: "middle",
         textAlign: textAlign,
         offsetX: offsetX,
         offsetY: offsetY,
@@ -119,7 +119,7 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
       var line = geometries[1];
       var image = new ol.style.Icon({
         imgSize: [580, 580],
-        scale: 0.0258620689655,
+        scale: 0.0278620689655,
         anchor: [7, 7],
         anchorXUnits: "pixels",
         anchorYUnits: "pixels",
