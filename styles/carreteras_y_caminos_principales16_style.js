@@ -80,29 +80,31 @@ function categories_carreteras_y_caminos_principales16(feature, value, size) {
 };
 var styleCache_carreteras_y_caminos_principales16 = {}
 var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
-  var zoom = map.getView().getZoom();
-  var font_size = zoom * (5 / 4);
-
+  
   var context = {
     feature: feature,
     variables: {}
   };
-  var value = feature.get("ID_SEGMENT");
+  var value = feature.get("id");
+  var id_segment = feature.get("ID_SEGMENT");
   var labelText = "";
   var key = "";
   size = 0;
   var textAlign = "left";
-  var offsetX = 0;
-  var offsetY = 10;
+  var offsetX = 5;
+  var offsetY = 12;
   if (feature.get("CODIGO") != null) {
     labelText = String(feature.get("CODIGO"));
   }
+  if(labelText.length == 2) {
+    offsetX = 7;
+  }
 
-  var style = categories_carreteras_y_caminos_principales16(feature, value, size);
+  var style = categories_carreteras_y_caminos_principales16(feature, id_segment, size);
   key = value + "_" + labelText
   if (!styleCache_carreteras_y_caminos_principales16[key]) {
     var text = new ol.style.Text({
-        font: '10px \'Calibri\', sans-serif',
+        font: '9px \'Calibri\', sans-serif',
         text: labelText,
         textBaseline: "middle",
         textAlign: textAlign,
@@ -118,9 +120,7 @@ var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
       var point = geometries[0];
       var line = geometries[1];
       var image = new ol.style.Icon({
-        imgSize: [580, 580],
-        scale: 0.0278620689655,
-        anchor: [7, 7],
+        scale: 0.038,
         anchorXUnits: "pixels",
         anchorYUnits: "pixels",
         rotation: 0.0,
