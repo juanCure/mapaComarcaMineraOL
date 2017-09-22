@@ -18,9 +18,7 @@ function categories_datos_relieve15(feature, value, size) {
     case 'TERMAL':
       return [new ol.style.Style({
         image: new ol.style.Icon({
-          imgSize: [1000, 1000],
-          scale: 0.038,
-          anchor: [19, 19],
+          scale: 0.015,
           anchorXUnits: "pixels",
           anchorYUnits: "pixels",
           rotation: 0.0,
@@ -31,9 +29,7 @@ function categories_datos_relieve15(feature, value, size) {
     case 'CASCADA':
       return [new ol.style.Style({
         image: new ol.style.Icon({
-          imgSize: [1000, 1000],
-          scale: 0.019,
-          anchor: [9, 9],
+          scale: 0.008,
           anchorXUnits: "pixels",
           anchorYUnits: "pixels",
           rotation: 0.0,
