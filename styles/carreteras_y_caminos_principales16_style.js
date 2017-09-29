@@ -4,83 +4,134 @@ function categories_carreteras_y_caminos_principales16(feature, value, size) {
   switch (value) {
     case 30:
       return [new ol.style.Style({
-          stroke: new ol.style.Stroke({ color: 'rgba(0,153,51,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5 }),
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: [.1, 7], lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
         }),
         new ol.style.Style({
-          stroke: new ol.style.Stroke({ color: 'rgba(255,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
         })
       ];
       break;
     case 41:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: [.1, 7], lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 34:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: [.1, 7], lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 35:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: [.1, 7], lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 10:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 11:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 22:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 24:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 31:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 32:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 33:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 40:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 29:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
     case 7217:
       return [new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: 'rgba(255,127,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1 }),
-      })];
+          stroke: new ol.style.Stroke({ color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.5 }),
+        }),
+        new ol.style.Style({
+          stroke: new ol.style.Stroke({ color: 'rgba(255,165,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: .9 }),
+        })
+      ];
       break;
   }
 };
 var styleCache_carreteras_y_caminos_principales16 = {}
 var style_carreteras_y_caminos_principales16 = function(feature, resolution) {
-  
   var context = {
     feature: feature,
     variables: {}
