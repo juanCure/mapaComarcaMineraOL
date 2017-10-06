@@ -28,15 +28,16 @@ var map = new ol.Map({
   overlays: [overlayPopup],
   layers: layersList,
   view: new ol.View({
-    maxZoom: 23,
-    minZoom: 8
+    extent: [-11074965.526731, 2221771.195944, -10918596.864468, 2339978.159977],
+    maxZoom: 20,
+    minZoom: 10
   })
 });
 
 var layerSwitcher = new ol.control.LayerSwitcher({ tipLabel: "Layers" });
 map.addControl(layerSwitcher);
 
-map.getView().fit([-11020392.839612, 2256378.621003, -10900523.390779, 2329057.197905], map.getSize());
+map.getView().fit([-11074965.526731, 2221771.195944, -10918596.864468, 2339978.159977], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -239,7 +240,7 @@ var onSingleClick = function(evt) {
   var currentFeature;
   var currentFeatureKeys;
   var count = 1;
-  var clusteredFeatures;  
+  var clusteredFeatures;
   /***** New content for popup *****/
   var content_image = '', video = '';
   map.forEachFeatureAtPixel(pixel, function(feature, layer) {
@@ -291,7 +292,7 @@ var onSingleClick = function(evt) {
         if (doPopup) {
           popupText = '<table>';
           for (var i = 0; i < currentFeatureKeys.length; i++) {
-            if (currentFeatureKeys[i] != 'geometry' && currentFeatureKeys[i] != 'image' 
+            if (currentFeatureKeys[i] != 'geometry' && currentFeatureKeys[i] != 'image'
               && currentFeatureKeys[i] != 'video') {
               popupField = '';
               if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label") {
