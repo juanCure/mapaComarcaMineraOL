@@ -70,12 +70,26 @@
   .ol-popup-closer:after {
     content: "✖";
   }
+
+  #logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+  }
+
+  /* Posicionado los botones del zoom un poco más abajo del logo de terra digitalis */
+
+  .ol-zoom {
+    top: 75px;
+  }
   </style>
   <title></title>
 </head>
 
 <body>
   <div id="map">
+    <img id="logo" style="height:45px;" src="images/logos/logo.png"/>
     <div id="popup" class="ol-popup">
       <a href="#" id="popup-closer" class="ol-popup-closer"></a>
       <div id="popup-content"></div>
