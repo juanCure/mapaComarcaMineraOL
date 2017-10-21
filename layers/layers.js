@@ -15,7 +15,7 @@ var layer_dem_geoparque_sombreado = new ol.layer.Tile({
   opacity: 0.6,
   title: "dem_geoparque (sombreado)",
   source: new ol.source.TileWMS({
-    url: 'http://132.248.14.208/geoserver/wms',
+    url: 'http://132.248.26.105/geoserver/wms',
     params: { 'LAYERS': 'geonode:dem_geoparque_sombreado2_c', 'TILED': true },
     serverType: 'geoserver'
   })
@@ -37,7 +37,7 @@ var layer_dem_geoparque_elevacion = new ol.layer.Tile({
   opacity: 0.5,
   title: "dem_geoparque (elevación)",
   source: new ol.source.TileWMS({
-    url: 'http://132.248.14.208/geoserver/wms',
+    url: 'http://132.248.26.105/geoserver/wms',
     params: { 'LAYERS': 'geonode:dem_geoparque_elevacion2_c', 'TILED': true },
     serverType: 'geoserver'
   })
@@ -52,7 +52,7 @@ var layer_pliegues_fallas_fracturas = new ol.layer.Tile({
         <img src="styles/legend/pliegues_fallas_fracturas4_1.png" /> FALLA NORMAL<br />\
         <img src="styles/legend/pliegues_fallas_fracturas4_2.png" /> FRACTURA<br />',
   source: new ol.source.TileWMS({
-    url: 'http://132.248.14.208/geoserver/wms',
+    url: 'http://132.248.26.105/geoserver/wms',
     params: { 'LAYERS': 'geonode:pliegues_fallas_fracturas', 'TILED': true },
     serverType: 'geoserver'
   })
