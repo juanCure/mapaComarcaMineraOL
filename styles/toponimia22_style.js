@@ -2,7 +2,6 @@ var size = 0;
 
 var styleCache_toponimia22={}
 var style_toponimia22 = function(feature, resolution){
-    console.log("resolucion del mapa: ", map.getView().getResolution())
     lyr_toponimia22.setTextPathStyle(function (f)
     {
       var text
@@ -45,7 +44,7 @@ var style_toponimia22 = function(feature, resolution){
         labelText = ""
     }
     var style = [ new ol.style.Style({
-        
+
     })];
     key = value + "_" + labelText
     if (!styleCache_toponimia22[key]){
@@ -107,7 +106,7 @@ function toponimiaGeoforma(f) {
 }
 
 function toponimiaRio(f) {
-  return new ol.style.TextPath({ 
+  return new ol.style.TextPath({
     text: f.get("nombre"),
     font: "20px italic, calibri, sans-serif",
     fill: new ol.style.Fill ({ color:'rgba(0, 0, 255, 1)' }),
@@ -121,7 +120,7 @@ function toponimiaRio(f) {
 }
 
 function toponimiaMunicipio(f) {
-  return new ol.style.TextPath({ 
+  return new ol.style.TextPath({
     text: f.get("nombre"),
     font: "ligth 9px italic, calibri, sans-serif",
     fill: new ol.style.Fill ({ color:'#000' }),
@@ -135,7 +134,7 @@ function toponimiaMunicipio(f) {
 }
 
 function toponimiaCapital(f) {
-  return new ol.style.TextPath({ 
+  return new ol.style.TextPath({
     text: f.get("nombre"),
     font: "bold 12px italic, calibri, sans-serif",
     fill: new ol.style.Fill ({ color:'rgba(0, 0, 0, 1)' }),
@@ -149,7 +148,7 @@ function toponimiaCapital(f) {
 }
 
 function toponimiaDefault(f) {
-  return new ol.style.TextPath({ 
+  return new ol.style.TextPath({
     text: f.get("nombre"),
     font: "15px Arial",
     fill: new ol.style.Fill ({ color:"#369" }),
